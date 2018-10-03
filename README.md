@@ -1,9 +1,13 @@
-This repository contains code for the paper [Learning by Association - A versatile semi-supervised training method for neural networks (CVPR 2017)](https://vision.in.tum.de/_media/spezial/bib/haeusser_cvpr_17.pdf) and the follow-up work [Associative Domain Adaptation (ICCV 2017)](https://vision.in.tum.de/_media/spezial/bib/haeusser_iccv_17.pdf)
+This repository contains code for the paper [Learning by Association - A versatile semi-supervised training method for neural networks (CVPR 2017)](https://vision.in.tum.de/_media/spezial/bib/haeusser_cvpr_17.pdf) 
+and the follow-up works [Associative Domain Adaptation (ICCV 2017)](https://vision.in.tum.de/_media/spezial/bib/haeusser_iccv_17.pdf) and [Associative Deep Clustering - Training a classification network with no labels (GCPR 2018)]
 
 It is implemented with TensorFlow. Please refer to the [TensorFlow documentation](https://www.tensorflow.org/install/) for further information.
 
 The core functions are implemented in `semisup/backend.py`.
 The files `train.py` and `eval.py` demonstrate how to use them. A quick example is contained in `mnist_train_eval.py`.
+
+To run unsupervised (clustering) mode, use the `train_unsup2.py` script. For reference see also our paper. 
+An example command with hyperparameters will be added soon.
 
 In order to reproduce the results from the paper, please use the architectures and pipelines from the `{stl10,svhn,synth}_tools.py`. They are loaded automatically by setting the flag `package` in `{train,eval}.py` accordingly.
 
